@@ -61,6 +61,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-show", "drun" };
 static const char *termcmd[]  = { "st", NULL };
+static const char *emojimenucmd[] = { "./.script/emoji-select", NULL };
 
 static Key keys[] = {
 	/* modifier             key    function        argument */
@@ -97,6 +98,7 @@ static Key keys[] = {
 	TAGKEYS(                17,                    7)                 // 8
 	TAGKEYS(                18,                    8)                 // 9
 	{ MODKEY|ShiftMask,     24,    quit,           {0} },             // q
+	{ MODKEY,               58,    spawn,          {.v = emojimenucmd } }, // m
 };
 
 /* button definitions */
