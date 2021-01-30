@@ -66,8 +66,8 @@ static const char *screenlayoutmenucmd[] = { "./.script/screen-layout-menu", NUL
 
 static Key keys[] = {
 	/* modifier             key    function        argument */
-	{ MODKEY,               33,    spawn,          {.v = dmenucmd } }, // p
-	{ MODKEY|ShiftMask,     36,    spawn,          {.v = termcmd } }, // Return
+	{ MODKEY,               65,    spawn,          {.v = dmenucmd } }, // space
+	{ MODKEY,               36,    spawn,          {.v = termcmd } }, // Return
 	{ MODKEY,               56,    togglebar,      {0} },             // b
 	{ MODKEY,               44,    focusstack,     {.i = +1 } },      // j
 	{ MODKEY,               45,    focusstack,     {.i = -1 } },      // k
@@ -75,14 +75,14 @@ static Key keys[] = {
 	{ MODKEY,               40,    incnmaster,     {.i = -1 } },      // d
 	{ MODKEY,               43,    setmfact,       {.f = -0.05} },    // h
 	{ MODKEY,               46,    setmfact,       {.f = +0.05} },    // l
-	{ MODKEY,               36,    zoom,           {0} },             // Return
+	{ MODKEY|ShiftMask,     36,    zoom,           {0} },             // Return
 	{ MODKEY,               23,    view,           {0} },             // Tab
-	{ MODKEY|ShiftMask,     54,    killclient,     {0} },             // c
+	{ MODKEY|ShiftMask,     53,    killclient,     {0} },             // x
 	{ MODKEY,               28,    setlayout,      {.v = &layouts[0]} }, // t
 	{ MODKEY,               41,    setlayout,      {.v = &layouts[1]} }, // f
-	{ MODKEY,               58,    setlayout,      {.v = &layouts[2]} }, // m
-	{ MODKEY,               65,    setlayout,      {0} },             // space
-	{ MODKEY|ShiftMask,     65,    togglefloating, {0} },             // space
+	{ MODKEY,               25,    setlayout,      {.v = &layouts[2]} }, // w
+	{ MODKEY,               33,    setlayout,      {0} },             // p
+	{ MODKEY|ShiftMask,     33,    togglefloating, {0} },             // p
 	{ MODKEY,               19,    view,           {.ui = ~0 } },     // 0
 	{ MODKEY|ShiftMask,     19,    tag,            {.ui = ~0 } },     // 0
 	{ MODKEY,               59,    focusmon,       {.i = -1 } },      // comma
